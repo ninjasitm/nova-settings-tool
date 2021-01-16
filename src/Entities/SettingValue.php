@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 
 /**
  * Class SettingValue
+ *
  * @package WesLal\NovaSettingsTool\Entities
  */
 final class SettingValue extends Model
@@ -29,11 +30,16 @@ final class SettingValue extends Model
 
     /**
      * Get the SettingValues by its key.
-     * @param string $key
+     *
+     * @param  string $key
      * @return Collection
      */
     public static function findByKey(string $key): Collection
     {
         return self::query()->where('key', $key)->get();
     }
+
+    /**
+     * TODO: Add user find by support
+     */
 }
